@@ -1,0 +1,33 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  z-index: 20;
+  width: calc(100% - 60px); /* 60px (close--menu - 20px padding) */
+  height: 100vh;
+  background-color: var(--dark-color);
+
+  transition: 0.3s;
+  grid-area: sidebar;
+
+  &.is-active {
+    left: 0;
+  }
+
+  &.is-active ~ .close--menu {
+    top: 10px;
+  }
+
+  &--grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px calc(100vh - 140px) 80px; /* 140px (sidebar--head + sidebar--myprofile) */
+  }
+}
+
+@import "./sidebarHead";
+@import "./sidebarContent";
+@import "./sidebarMembers";
+@import "./sidebarMyprofile";
+@import "./sidebarMyprofileOpen";

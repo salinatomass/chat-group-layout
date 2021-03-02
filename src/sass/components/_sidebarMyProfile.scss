@@ -1,0 +1,44 @@
+.sidebar--myprofile {
+  display: grid;
+  grid-template-columns: 42px 1fr 15px;
+  align-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #0b090c;
+
+  &__picture {
+    width: 42px;
+    height: 42px;
+
+    img {
+      border-radius: 7px;
+    }
+  }
+
+  &__name {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    color: var(--light-color);
+    background: transparent;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__icon.is-active > i {
+    transform: rotate(180deg);
+    transition: 0.2s;
+  }
+
+  &__icon.is-active ~ .sidebar--myprofile-open {
+    display: block;
+  }
+}

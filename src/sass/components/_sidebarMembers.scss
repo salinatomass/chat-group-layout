@@ -1,0 +1,32 @@
+.sidebar--channel-members {
+  h2 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  &__picture {
+    width: 42px;
+    height: 42px;
+
+    img {
+      border-radius: 12px;
+    }
+  }
+
+  &__name {
+    margin-left: 20px;
+    
+    &:hover {
+      text-decoration: underline;
+      color: var(--soft-grey);
+    }
+  }
+}

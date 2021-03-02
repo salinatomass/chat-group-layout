@@ -1,0 +1,51 @@
+.typing {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  padding-bottom: 15px;
+  width: calc(100% - 40px); /* 100% (screen), 40px (wrapper padding) */
+  background-color: var(--grey-color);
+  border-top-left-radius: 12px;
+
+  &--container {
+    padding: 0 10px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--typing-box);
+    border-radius: 12px;
+
+    input {
+      padding-left: 10px;
+      width: calc(100% - 50px); /* 100% (typing--container), 50px (typing--send) */
+      color: var(--light-color);
+      font-size: 1.4rem;
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+    input::placeholder {
+      color: var(--soft-grey);
+    }
+  }
+
+  &--send {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-color);
+    background-color: var(--cool-blue);
+    border: none;
+    border-radius: 7px;
+    outline: none;
+
+    cursor: pointer;
+
+    i {
+      padding-left: 2px;
+    }
+  }
+}

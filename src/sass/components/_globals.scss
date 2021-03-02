@@ -1,0 +1,76 @@
+/*
+  1. Posicionamiento
+  2. Modelo de caja
+  3. Tipografía
+  4. Visuales
+  5. Otros
+*/
+
+:root {
+  --light-color: #e0e0e0;
+  --dark-color: #120f13;
+  --grey-color: #252329;
+  --soft-grey: #828282;
+  --typing-box: #3c393f;
+  --cool-blue: #2f80ed;
+  --fire-color: #eb5757;
+
+  --shadow: rgba(0, 0, 0, 0.25);
+
+  --primary-font: "Noto Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  color: var(--light-color);
+  font-weight: 500;
+  line-height: 2.5rem;
+  letter-spacing: -0.05rem;
+  background-color: var(--grey-color);
+  overflow-y: hidden;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+h3 {
+  color: var(--soft-grey);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+h4 {
+  color: var(--soft-grey);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+}
+
+.hidden {
+  display: none !important;
+}

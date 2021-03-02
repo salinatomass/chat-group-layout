@@ -1,0 +1,16 @@
+.main {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  height: 100vh;
+
+  overflow-y: scroll;
+  grid-area: main;
+
+  &--grid {
+    display: grid;
+    grid-template-rows: 1fr max-content;
+  }
+}
+
+@import "./chat";
+@import "./typing";

@@ -1,0 +1,57 @@
+.chat {
+  &--date {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    color: var(--soft-grey);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+
+    hr {
+      position: relative;
+      top: 8px;
+      height: 1px;
+      border: none;
+      background-color: var(--soft-grey);
+    }
+    
+    small {
+      z-index: 1;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: fit-content;
+      background: var(--grey-color);
+    }
+  }
+
+  &--item {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+  }
+
+  &--img {
+    height: 42px;
+    img {
+      border-radius: 7px;
+    }
+  }
+
+  &--content {
+    margin-left: 10px;
+    &__info {
+      display: flex;
+      align-items: flex-start;
+    }
+    &__info h4 {
+      margin-top: 3px;
+      margin-left: 10px;
+    }
+    &__text {
+      margin-top: 5px;
+    }
+  }
+}

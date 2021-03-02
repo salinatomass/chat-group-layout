@@ -1,0 +1,19 @@
+.sidebar--content {
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow-y: scroll;
+
+  .sidebar--channel-description {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    h2 {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
