@@ -203,7 +203,7 @@ img {
   bottom: 0;
   z-index: 3;
   padding-bottom: 15px;
-  width: calc(100% - 40px); /* 100% of screen - 40px of wrapper padding */
+  width: calc(100% - 40px); /* 100% (screen) - 40px (wrapper padding) */
   background-color: var(--grey-color);
   border-top-left-radius: 12px;
 }
@@ -218,7 +218,7 @@ img {
 }
 .typing--container input {
   padding-left: 10px;
-  width: 80%;
+  width: calc(100% - 50px); /* 100% (typing--container), 50px (typing--send) */
   color: var(--light-color);
   font-size: 1.4rem;
   background: transparent;
@@ -252,7 +252,7 @@ img {
   top: 0;
   left: -100vw;
   z-index: 20;
-  width: calc(100% - 60px);
+  width: calc(100% - 60px); /* 60px (close--menu - 20px padding) */
   height: 100vh;
   background-color: var(--dark-color);
   transition: 0.3s;
@@ -269,7 +269,7 @@ img {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px calc(100vh - 140px) 80px;
+  grid-template-rows: 60px calc(100vh - 140px) 80px; /* 140px (sidebar--head + sidebar--myprofile) */
 }
 /* ____SidebarHead: */
 .sidebar--head {
@@ -309,6 +309,12 @@ img {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+
+  cursor: pointer;
+}
+.sidebar--channel-members__name:hover {
+  text-decoration: underline;
+  color: var(--soft-grey);
 }
 .sidebar--channel-members__picture {
   width: 42px;
@@ -412,7 +418,7 @@ img {
 /* _____Scrollbars: */
 .main::-webkit-scrollbar,
 .sidebar--content::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 .main::-webkit-scrollbar-thumb,
 .sidebar--content::-webkit-scrollbar-thumb {
@@ -457,7 +463,7 @@ img {
   .main .typing {
     width: calc(
       70% - 40px
-    ); /* 70% (100% viewport - 30% sidebar) - 40px (main section paddings) */
+    ); /* 70% (viewport - sidebar), 40px (main section paddings) */
   }
 
   .sidebar {
@@ -466,7 +472,9 @@ img {
   }
   .sidebar--myprofile-open {
     bottom: 110px;
-    right: calc(70% + 20px);
+    right: calc(
+      70% + 20px
+    ); /* 70% (main section) + 20px (myprofile padding-right) */
   }
 }
 
@@ -484,20 +492,31 @@ img {
     font-size: 1.4rem;
   }
 
+  .chat .chat--date {
+    font-size: 1.4rem;
+  }
+
   .wrapper {
     padding-left: 70px;
     padding-right: 70px;
   }
 
   .main .typing {
-    padding-bottom: 40px;
-    width: calc((100% - 350px) - 140px);
+    padding-bottom: 30px;
+    width: calc(
+      (100% - 350px) - 140px
+    ); /* 350px (sidebar) - 140px (main section padding) */
+  }
+  .typing--container input {
+    font-size: 1.6rem;
   }
 
   .sidebar {
     width: 350px;
   }
   .sidebar--myprofile-open {
-    right: calc((100% - 350px) + 20px);
+    right: calc(
+      (100% - 350px) + 20px
+    ); /* 350px (sidebar) + 20px (myprofile padding-right) */
   }
 }
